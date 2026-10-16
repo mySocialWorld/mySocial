@@ -1,26 +1,147 @@
-Thank you for using our VPN application. We are committed to protecting your privacy and we take our responsibility seriously. This Privacy Policy explains how we collect, use, and disclose information when you use our VPN application that stores Android ID.
+PRIVACY POLICY FOR MYSOCIAL
 
-Collection of Information:
-We may collect information when you use our VPN application, including your Android ID. This information is used to improve the quality and functionality of our VPN service. We do not collect any personally identifiable information, such as your name or email address.
+Effective Date: October 16, 2026
+Last Updated: October 16, 2026
 
-Use of Information:
-We use your Android ID to provide you with the best possible VPN service. This includes improving the quality and functionality of our VPN application, troubleshooting technical issues, and monitoring the performance of our VPN servers. We may also use your Android ID to analyze trends, track usage, and gather demographic information.
+This Privacy Policy describes how MySocial ("we", "us", or "our", package name: ai.my.social) collects, uses, protects, and discloses information when you download, install, and use our mobile application (the "App") available on Google Play.
 
-Disclosure of Information:
-We do not sell, rent, or share your Android ID or any other information we collect with third parties. However, we may disclose your Android ID if required to do so by law, or if we believe that such disclosure is necessary to protect our rights, or the safety or rights of others.
+We respect your personal privacy and are committed to maintaining the confidentiality and integrity of your data. Please read this Privacy Policy carefully to understand our practices regarding your information.
 
-Security:
-We take reasonable precautions to protect your Android ID and other information we collect from unauthorized access, use, or disclosure. However, no transmission of data over the internet can be guaranteed to be completely secure. Therefore, we cannot guarantee the security of your information transmitted to our VPN application.
+================================================================================
+1. CORE PURPOSE AND USE OF ANDROID VPNSERVICE
+================================================================================
 
-Third-Party Services:
-Our VPN application may contain links to third-party websites or services that are not owned or controlled by us. We are not responsible for the privacy practices of these third-party websites or services, and we encourage you to review the privacy policies of these websites or services before providing any information to them.
+MySocial is a virtual private network (VPN) client application designed to provide secure and encrypted Internet connectivity.
 
-Changes to this Privacy Policy:
-We reserve the right to modify this Privacy Policy at any time. If we make any material changes to this Privacy Policy, we will notify you by email or by posting a notice on our website prior to the effective date of the changes.
+Mandatory Google Play VpnService Disclosure:
+- Use of VpnService: Our App utilizes the Android VpnService (android.net.VpnService) API to create a secure, encrypted, device-level network tunnel between your Android device and remote VPN servers.
+- Core Purpose: The primary and exclusive purpose of utilizing VpnService is to encrypt your incoming and outgoing Internet data packets, safeguarding your communications on public, cellular, and untrusted Wi-Fi networks.
+- Traffic Encryption: All data transmitted through the tunnel is encrypted using industry-standard cryptographic protocols (including SSL/TLS and DTLS) from your device to the VPN endpoint.
+- No Traffic Logging (Zero-Log Policy): We do NOT monitor, inspect, log, capture, record, store, or sell the contents of your Internet browsing activities, visited websites, destination IP addresses, DNS queries, or transferred payloads routed through the VPN tunnel.
 
-Contact Us:
-If you have any questions or concerns about this Privacy Policy, please contact us at vpnprobashi@gmail.com.
+================================================================================
+2. INFORMATION WE COLLECT
+================================================================================
 
+To authenticate your access, manage your subscription/key validity, and ensure app stability, we collect and process only the minimum necessary information:
 
+A. Account & Authentication Information:
+- Username / Access Key: When you sign in to MySocial, you provide a username or authorization passkey. This identifier is used solely to authenticate your account and confirm active subscription status.
+- Account Expiration Data: We receive subscription validity and expiration dates returned by the authentication server to display your account status and authorize tunnel access.
 
+B. Device & Technical Identifiers:
+- Device Identifier (Android ID): When you authenticate your username/key, the app reads your device's unique identifier (Settings.Secure.ANDROID_ID) and transmits it securely to the authentication server.
+  * Purpose: This identifier is used strictly for license authentication, device authorization, and preventing concurrent account abuse or unauthorized credential sharing.
+  * We do not link this identifier to your personal real-world identity (such as your legal name or phone number).
 
+C. Network State & Connection Metrics:
+- Network Status: The app checks the state of your Wi-Fi and mobile network connections locally on your device to manage seamless connection switching and reconnect the VPN tunnel if your network drops or transitions.
+- Real-time Session Statistics: The app calculates uploaded (TX) and downloaded (RX) byte counters and connection duration strictly in real-time on your device to display active session stats in the UI. These live counters are not logged or stored on our external servers.
+
+D. App Analytics & Diagnostics (Google Firebase):
+We integrate Google Firebase SDKs (Firebase Remote Config and Firebase Analytics):
+- Firebase Remote Config: Retrieves operational settings, including VPN endpoints and authentication URLs, to ensure connection availability.
+- Firebase Analytics: Collects anonymous, aggregated technical metrics, such as device model, OS version, session durations, and crash logs to improve app performance and stability. For more details, visit Google's Privacy & Terms: https://policies.google.com/technologies/partner-sites
+
+================================================================================
+3. INFORMATION WE DO NOT COLLECT
+================================================================================
+
+We believe in maximum digital privacy. We explicitly do NOT collect, store, or monitor:
+- Browsing history, visited websites, or search queries.
+- Network traffic payloads, message content, or downloaded files.
+- Personal identity details (such as your legal name, home address, or phone number).
+- Precise GPS location data.
+- Financial, payment card, or banking details through the app.
+
+================================================================================
+4. HOW WE USE YOUR INFORMATION
+================================================================================
+
+We use the minimal data collected strictly for the following legitimate purposes:
+1. Authentication & Access Control: To verify that your username or passkey is active and authorized to connect.
+2. Device Enforcement: To bind active licenses to authorized devices and prevent unauthorized credential sharing.
+3. VPN Connection Management: To establish, maintain, and reconnect secure VPN tunnels to our servers.
+4. App Maintenance & Reliability: To monitor application crash rates, optimize server routing, and push configuration updates via Firebase Remote Config.
+5. Customer Support: To assist you when troubleshooting connection or authentication issues.
+
+================================================================================
+5. THIRD-PARTY SERVICES AND DATA SHARING
+================================================================================
+
+We do not sell, rent, trade, or share your data with third parties for commercial or advertising purposes. We utilize the following third-party infrastructure:
+
+- Google Firebase (Remote Config & Analytics): App configuration delivery, diagnostic analytics, and crash monitoring. Privacy Policy: https://policies.google.com/privacy
+- Authentication and VPN Server Infrastructure: Secure server endpoints to authenticate credentials and route encrypted tunnel traffic.
+
+We may disclose information only if strictly required by applicable law, court order, or governmental regulation.
+
+================================================================================
+6. ANDROID PERMISSIONS DECLARED
+================================================================================
+
+1. VPN Service (android.permission.BIND_VPN_SERVICE)
+   Required by Android to create and control the local VPN network interface and route encrypted traffic.
+
+2. Internet Access (android.permission.INTERNET)
+   Allows the app to contact authentication servers and transmit encrypted VPN traffic across the Internet.
+
+3. Access Network State (android.permission.ACCESS_NETWORK_STATE)
+   Detects whether the device is connected to Wi-Fi, cellular data, or offline to maintain tunnels.
+
+4. Access Wi-Fi State (android.permission.ACCESS_WIFI_STATE)
+   Monitors Wi-Fi connectivity to support automatic reconnection on Wi-Fi state changes.
+
+5. Wake Lock (android.permission.WAKE_LOCK)
+   Keeps the CPU active to prevent VPN tunnel interruption when the screen turns off.
+
+6. Receive Boot Completed (android.permission.RECEIVE_BOOT_COMPLETED)
+   Allows the app to handle connection states after device restart if configured.
+
+================================================================================
+7. DATA SECURITY AND ENCRYPTION
+================================================================================
+
+- Tunnel Encryption: VPN traffic routed through the app is encrypted using industry-standard cryptographic protocols (including SSL/TLS and DTLS).
+- Transmission Security: Communication between the app, Firebase, and authentication endpoints occurs over secure protocols.
+- Local Storage: Cached session keys and settings are stored within Android's protected application sandbox, accessible only by MySocial.
+
+================================================================================
+8. DATA RETENTION AND DELETION POLICY
+================================================================================
+
+In compliance with Google Play's User Data policy:
+
+- Retention Period: Local credentials and cached settings are retained locally on your device until you clear your credentials or uninstall the App. Server-side authentication logs (Android ID and username) are retained solely for the active duration of your license/subscription and purged thereafter.
+
+- How to Request Data Deletion:
+  * On your device: You can immediately erase locally cached credentials and session data by clearing the username field inside the app or by navigating to Android Settings > Apps > MySocial > Storage > Clear Data.
+  * Server-side deletion: You may request complete erasure of your account, username, and associated device identifiers from our authentication servers at any time by sending an email to our support address: vpnprobashi@gmail.com with the subject line "Data Deletion Request - MySocial". Requests are verified and processed within 30 days.
+
+================================================================================
+9. CHILDREN'S PRIVACY
+================================================================================
+
+MySocial does not knowingly collect, solicit, or store personal information from children under the age of 13 (or under 16 where applicable). The App is intended for a general audience. If we discover that a child under 13 has provided us with personal information, we will delete such data immediately.
+
+================================================================================
+10. YOUR RIGHTS (GDPR & CCPA/CPRA COMPLIANCE)
+================================================================================
+
+Depending on your jurisdiction, you have the right to request access, rectification, portability, or deletion of your personal data, or to object to processing. To exercise these rights, please contact us using the details below.
+
+================================================================================
+11. CHANGES TO THIS PRIVACY POLICY
+================================================================================
+
+We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically.
+
+================================================================================
+12. CONTACT US
+================================================================================
+
+If you have any questions or requests regarding this Privacy Policy, please contact us at:
+
+- App Name: MySocial (ai.my.social)
+- Developer / Company Name: MySocial
+- Support Email: vpnprobashi@gmail.com
